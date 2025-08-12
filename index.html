@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shazia Wazir — CV</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#0f54a8;
+      --accent-2:#0b76d1;
+      --shadow: 0 6px 20px rgba(18, 38, 63, 0.08);
+      --max-width:900px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    body{
+      margin:0;
+      background:linear-gradient(180deg, var(--bg), #eef4fb 120%);
+      color:#111827;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:32px;
+      display:flex;
+      justify-content:center;
+      font-size:16px;
+      line-height:1.45;
+    }
+
+    .cv {
+      width:100%;
+      max-width:var(--max-width);
+      background:var(--card);
+      border-radius:12px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:0;
+    }
+
+    /* stack on small screens */
+    @media (max-width:880px){
+      .cv { grid-template-columns: 1fr; padding-bottom:18px;}
+      .side { order:2; }
+      .main { order:1; }
+    }
+
+    .header{
+      grid-column:1/-1;
+      display:flex;
+      gap:20px;
+      align-items:center;
+      padding:28px;
+      border-bottom:1px solid #eef2f7;
+      background:linear-gradient(90deg, rgba(11,118,209,0.06), rgba(15,84,168,0.02));
+    }
+
+    .avatar {
+      width:92px;
+      height:92px;
+      border-radius:12px;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      font-weight:700;
+      font-size:28px;
+      box-shadow:0 6px 18px rgba(11,118,209,0.12);
+    }
+
+    .title {
+      flex:1;
+    }
+    .name {
+      font-size:20px;
+      font-weight:700;
+      margin:0 0 4px 0;
+    }
+    .role {
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .contact {
+      text-align:right;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .contact a { color:var(--accent); text-decoration:none; }
+
+    .content{
+      display:grid;
+      grid-template-columns: 1fr 320px;
+    }
+
+    .main{
+      padding:28px;
+      min-height:420px;
+      border-right:1px solid #f1f4f8;
+    }
+
+    .side{
+      padding:28px;
+      background:linear-gradient(0deg, rgba(246,249,255,0.6), rgba(246,249,255,0.6));
+    }
+
+    h2 {
+      margin:0 0 10px 0;
+      font-size:16px;
+      color:#0f1724;
+    }
+    p.small { color:var(--muted); margin:6px 0 14px 0; font-size:14px; }
+
+    .section {
+      margin-bottom:20px;
+    }
+
+    .skills-list {
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+    .skill{
+      background:#f1f6ff;
+      color:var(--accent-2);
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:13px;
+      border:1px solid rgba(11,118,209,0.06);
+    }
+
+    .job{
+      margin-bottom:14px;
+    }
+    .job .meta{ display:flex; justify-content:space-between; gap:8px; align-items:center; }
+    .job .title { font-weight:600; font-size:15px; margin:4px 0; }
+    .job .company { color:var(--muted); font-size:13px; }
+    .job p { margin:8px 0 0 0; color:#374151; font-size:14px; }
+
+    .edu-item { margin-bottom:12px; }
+    .project { margin-bottom:12px; }
+
+    .badge {
+      display:inline-block;
+      background:#eef6ff;
+      color:var(--accent-2);
+      padding:6px 8px;
+      border-radius:8px;
+      font-size:13px;
+      border:1px solid rgba(11,118,209,0.06);
+    }
+
+    .muted { color:var(--muted); font-size:13px; }
+
+    footer.cv-footer{
+      grid-column:1/-1;
+      padding:18px 28px;
+      border-top:1px solid #f1f4f8;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      background:#fbfdff;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    /* Printable tweaks */
+    @media print {
+      body { padding:0; background:white; }
+      .cv { box-shadow:none; border-radius:0; }
+    }
+  </style>
+</head>
+<body>
+  <article class="cv" role="article" aria-label="CV of Shazia Wazir">
+
+    <header class="header">
+      <div class="avatar" aria-hidden="true">SW</div>
+      <div class="title">
+        <h1 class="name">Shazia Wazir</h1>
+        <p class="role">Web Developer • Frontend (HTML, CSS) • Learning React & Flutter</p>
+        <p class="muted" style="margin-top:8px">7th Semester — BSc Computer Science (studying)</p>
+      </div>
+      <div class="contact">
+        <div><strong>Email:</strong> <a href="mailto:your-email@example.com">your-email@example.com</a></div>
+        <div><strong>Phone:</strong> +92-XXX-XXXXXXX</div>
+        <div><strong>Location:</strong> Pakistan</div>
+      </div>
+    </header>
+
+    <div class="content">
+      <main class="main" role="main">
+        <section class="section">
+          <h2>Professional Summary</h2>
+          <p class="small">
+            Simple, clear, and professional: I am a 7th-semester Computer Science student with
+            practical experience building web projects using HTML, CSS, and JavaScript.
+            I enjoy building user-friendly interfaces and am learning React and mobile development.
+            Seeking internships or junior web developer roles where I can grow and contribute.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Work Experience</h2>
+
+          <!-- Replace or add actual entries -->
+          <div class="job">
+            <div class="meta">
+              <div>
+                <div class="title">Freelance Web Developer</div>
+                <div class="company">Self-employed — Remote</div>
+              </div>
+              <div class="muted">2023 — Present</div>
+            </div>
+            <p>Built responsive website layouts using HTML and Tailwind CSS. Implemented UI components and fixed layout bugs for small clients.</p>
+          </div>
+
+          <div class="job">
+            <div class="meta">
+              <div>
+                <div class="title">Web Development Intern (Project)</div>
+                <div class="company">Academic / Personal Projects</div>
+              </div>
+              <div class="muted">2024</div>
+            </div>
+            <p>Worked on an e-commerce layout replica and an Islamic travel information site. Focus on responsive design and accessibility.</p>
+          </div>
+
+        </section>
+
+        <section class="section">
+          <h2>Projects</h2>
+
+          <div class="project">
+            <div class="title">AI-powered Job Recommendation (Project)</div>
+            <div class="muted">Role: Developer</div>
+            <p>Prototype platform that analyzes resumes (JSON-based) and matches candidates to suitable jobs. I worked on frontend layout and data display components.</p>
+          </div>
+
+          <div class="project">
+            <div class="title">Local Vendor & Artist Marketplace (Course Project)</div>
+            <div class="muted">Role: Designer / Frontend</div>
+            <p>A hyperlocal e-commerce concept that showcases artisans’ products, with features like wishlist, vendor registration, and live inventory previews.</p>
+          </div>
+
+          <div class="project">
+            <div class="title">Islamic Travel Website — Information Portal</div>
+            <div class="muted">Role: Frontend Developer</div>
+            <p>Created responsive pages about historical and sacred places with an easy, modest UI. Simple Tailwind-based designs and hero sections.</p>
+          </div>
+
+        </section>
+
+        <section class="section">
+          <h2>Education</h2>
+          <div class="edu-item">
+            <div class="meta">
+              <div>
+                <div class="title">BSc — Computer Science (in progress)</div>
+                <div class="company">Your University Name</div>
+              </div>
+              <div class="muted">Expected: 20XX</div>
+            </div>
+            <p class="small">Currently in 7th semester — coursework includes web development, algorithms, databases, and software engineering.</p>
+          </div>
+
+        </section>
+
+      </main>
+
+      <aside class="side" role="complementary">
+        <section class="section">
+          <h2>Skills</h2>
+          <div class="skills-list" aria-hidden="false">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">Tailwind CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Responsive Design</span>
+            <span class="skill">Git</span>
+            <span class="skill">PHP (basic)</span>
+            <span class="skill">React (learning)</span>
+            <span class="skill">Flutter (learning)</span>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Certifications</h2>
+          <p class="muted">Add any certificates here (e.g., Coursera, freeCodeCamp, BitCoder course).</p>
+        </section>
+
+        <section class="section">
+          <h2>Languages</h2>
+          <p class="muted">Urdu (native), English (fluent)</p>
+        </section>
+
+        <section class="section">
+          <h2>Interests</h2>
+          <p class="muted">Web development, UI design, AI exploration, cybersecurity basics</p>
+        </section>
+
+        <section class="section">
+          <h2>Availability</h2>
+          <p class="muted">Open to internships and junior developer roles — remote or on-site.</p>
+        </section>
+      </aside>
+    </div>
+
+    <footer class="cv-footer">
+      <div>References available on request</div>
+      <div>Last updated: <strong><!-- autopopulated by you --></strong></div>
+    </footer>
+
+  </article>
+</body>
+</html>
